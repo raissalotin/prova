@@ -1,0 +1,31 @@
+<script>
+    //USANDO OPERADOR TERNÁRIO USANDO OPERADOR TERNÁRIO USANDO OPERADOR TERNÁRIO
+    
+    //PROBLEMA: Prova de Planilhas
+    //Peça para o aluno informar a quantidade de operações matemáticas que foram necessárias durante a execução da prova.
+    //Peça também para o aluno informar a quantidade de função SE (=SE) que foram necessárias, e também peça para informar a quantidade de função PROCV (=PROCV).
+    //Considere que cada operação matemática equivale a 1.5 pontos.
+    //Considere que cada função SE (=SE) equivale a 4 pontos.
+    //Considere que cada função PROCV (=PROCV) equivale a 7 pontos.
+
+    //Calcule a quantidade de pontos total, de acordo com as operações e funções necessárias, que foram informadas pelo usuário.
+    //Se a quantidade de pontos for até 20 (inclusive), a prova será considerada "INICIANTE".
+    //Se a quantidade de pontos for acima de 20, a prova será considerada "INTERMEDIÁRIO".
+    
+    //Calcule os pontos e apresente o nível de complexidade da prova de planilhas.
+
+    //ENTRADA
+const operacoes = Number(prompt("quantidade de operacoes usadas"))
+const SE = Number(prompt("quantidade de =SE usadas"))
+const PROCV = Number(prompt("quantidade de =PROCV usadas"))
+let resultado
+let operacoesMatematicas = operacoes * 1.5
+let funcaoSE = SE *4 
+let funcaoPrcV =PROCV * 7
+let pontos = operacoesMatematicas + funcaoPrcV + funcaoSE
+//PROCESSAMENTO
+resultado = (pontos <= 20) ? "iniciante" : "intermediario"
+
+    //SAÍDA
+alert(resultado)
+</script>

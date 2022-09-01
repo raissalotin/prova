@@ -1,0 +1,25 @@
+<script>
+    //USANDO OPERADOR TERNÁRIO USANDO OPERADOR TERNÁRIO USANDO OPERADOR TERNÁRIO
+    
+    //PROBLEMA: Taxa de Juros
+    //Peça para o usuário informar o valor do computador que deseja comprar. Peça também para ele informar a quantidade de parcelas que deseja financiar.
+    //Considere que:
+    //Se a quantidade de parcelas for 1 (apenas uma), deverá ser aplicado um desconto de 5% (5/100).
+    //Se a quantidade de parcelas for até 6 (inclusive), o juro a ser aplicado será de 3% (3/100) sob o valor do computador.
+    //Se a quantidade de parcelas for até 12 (inclusive), o juro a ser aplicado será de 8% sob o valor do computador.
+    //Se a quantidade de parcelas for acima de 12, o juro a ser aplicado será de 12% sob o valor do computador.
+    //Apresente o valor final do computador e o valor de cada parcela.
+
+    //ENTRADA
+const valorDesejado = Number(prompt("Informe o valor que deseja pagar!"));
+const parcelas = Number(prompt("em quantas parcelas deseja financiar?"));
+let resultado;
+    //PROCESSAMENTO
+resultado = (parcelas === 1) ? "o valor do computador é de " + (valorDesejado - (valorDesejado * 0.05)) + " reais" 
+: (parcelas <= 6) ? " com juros de 3% o valor será de " + (valorDesejado + (valorDesejado * 0.03)) + " e cada parcela será " + (valorDesejado / parcelas + (valorDesejado * 0.03) ) + " reais" 
+: (parcelas <= 12) ? " com juros de 8% o valor será de " + (valorDesejado * 0.08) + " e cada parcela será " + ((valorDesejado * 0.08) + valorDesejado /parcelas ) 
+:" terá juros de 12% e o valor será " + (valorDesejado * 0.12) + " e cada parcela será " + ((valorDesejado * 0.12) + valorDesejado / parcelas) + " reais";
+
+    //SAÍDA
+alert(resultado);
+</script>
